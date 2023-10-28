@@ -44,7 +44,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qi1-kO-lJ1" secondAttribute="trailing" id="z72-rK-nIh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stock App" id="MFs-l0-28s"/>
+                    <navigationItem key="navigationItem" title="Stock App" id="MFs-l0-28s">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="8nh-Ze-dF7">
+                            <connections>
+                                <segue destination="em7-1e-dG9" kind="show" identifier="SegueAddStock" id="VWA-eY-Acf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblView" destination="qi1-kO-lJ1" id="R0Z-Xj-vPy"/>
                     </connections>
@@ -52,6 +58,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QAN-yR-pOT">
+            <objects>
+                <viewController id="em7-1e-dG9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lhj-3Z-sDK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xfK-UI-asu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EdJ-3f-xLq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ze-VG-oAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PuM-fu-ixC">
@@ -73,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
