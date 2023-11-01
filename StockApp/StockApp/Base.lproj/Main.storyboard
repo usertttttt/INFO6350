@@ -66,8 +66,21 @@
                     <view key="view" contentMode="scaleToFill" id="Lhj-3Z-sDK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stock Symbol" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tyr-4g-vDg">
+                                <rect key="frame" x="0.0" y="409" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xfK-UI-asu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tyr-4g-vDg" firstAttribute="centerX" secondItem="Lhj-3Z-sDK" secondAttribute="centerX" id="1ou-PR-Xrd"/>
+                            <constraint firstItem="Tyr-4g-vDg" firstAttribute="centerY" secondItem="Lhj-3Z-sDK" secondAttribute="centerY" id="R9K-rX-RHz"/>
+                            <constraint firstItem="Tyr-4g-vDg" firstAttribute="leading" secondItem="xfK-UI-asu" secondAttribute="leading" id="hNk-eX-VSj"/>
+                            <constraint firstItem="xfK-UI-asu" firstAttribute="trailing" secondItem="Tyr-4g-vDg" secondAttribute="trailing" id="mFe-N9-vb5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EdJ-3f-xLq"/>
                 </viewController>
