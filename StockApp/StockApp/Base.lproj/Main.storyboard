@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Stock View Controller-->
         <scene sceneID="QAN-yR-pOT">
             <objects>
-                <viewController id="em7-1e-dG9" sceneMemberID="viewController">
+                <viewController id="em7-1e-dG9" customClass="AddStockViewController" customModule="StockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lhj-3Z-sDK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,17 +72,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yS-cB-Ixk">
+                                <rect key="frame" x="0.0" y="482" width="393" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1lL-SJ-ZgT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Stock"/>
+                                <connections>
+                                    <action selector="addStockAction:" destination="em7-1e-dG9" eventType="touchUpInside" id="hze-9I-83H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xfK-UI-asu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2yS-cB-Ixk" firstAttribute="leading" secondItem="xfK-UI-asu" secondAttribute="leading" id="0KU-5A-0Pt"/>
                             <constraint firstItem="Tyr-4g-vDg" firstAttribute="centerX" secondItem="Lhj-3Z-sDK" secondAttribute="centerX" id="1ou-PR-Xrd"/>
+                            <constraint firstItem="xfK-UI-asu" firstAttribute="trailing" secondItem="2yS-cB-Ixk" secondAttribute="trailing" id="Fxg-5E-qHI"/>
                             <constraint firstItem="Tyr-4g-vDg" firstAttribute="centerY" secondItem="Lhj-3Z-sDK" secondAttribute="centerY" id="R9K-rX-RHz"/>
                             <constraint firstItem="Tyr-4g-vDg" firstAttribute="leading" secondItem="xfK-UI-asu" secondAttribute="leading" id="hNk-eX-VSj"/>
                             <constraint firstItem="xfK-UI-asu" firstAttribute="trailing" secondItem="Tyr-4g-vDg" secondAttribute="trailing" id="mFe-N9-vb5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EdJ-3f-xLq"/>
+                    <connections>
+                        <outlet property="txtStock" destination="Tyr-4g-vDg" id="HiP-6G-Ya6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ze-VG-oAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
