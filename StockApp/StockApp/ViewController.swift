@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    var stocks: [StockClass] = [StockClass]()
+    var stocksArray: [StockClass] = [StockClass]()
     @IBOutlet weak var tblView: UITableView!
     
     override func viewDidLoad() {
@@ -22,7 +22,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let realm = try Realm()
             let stocks = realm.objects(StockClass.self)
             print(stocks)
-            
+            for stock in stocks{
+                stocksArray.append(stock)
+            }
+            tblView.reloadData()
         }catch{
             print("Error in reading from Realm \(error)")
         }
@@ -31,15 +34,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return stocks.count
+            return stocksArray.count
             
         }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            //cell.textLabel?.text = stocks[indexPath.row]
-            cell.textLabel?.text = "Ashish"
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let symbol = stocksArray[indexPath.row].symbol
+        let price = String(format: "%.2f", stocksArray[indexPath.row].price)
+            //cell.textLabel?.text = stocksArray[indexPath.row]
+        cell.textLabel?.text = "\(symbol) : \(price)$"
+        return cell
         }
 }
 
