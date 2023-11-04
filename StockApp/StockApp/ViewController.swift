@@ -6,23 +6,39 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    let stockNames = ["MSFT", "TSLA", "META", "GOOG"]
+    var stocks: [StockClass] = [StockClass]()
     @IBOutlet weak var tblView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        loadStockValues()
     }
+    
+    func loadStockValues(){
+        do{
+            let realm = try Realm()
+            let stocks = realm.objects(StockClass.self)
+            print(stocks)
+            
+        }catch{
+            print("Error in reading from Realm \(error)")
+        }
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return stockNames.count
+            return stocks.count
             
         }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = stockNames[indexPath.row]
+            //cell.textLabel?.text = stocks[indexPath.row]
+            cell.textLabel?.text = "Ashish"
             return cell
         }
 }

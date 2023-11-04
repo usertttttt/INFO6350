@@ -68,18 +68,28 @@ class AddStockViewController: UIViewController {
                     
                     print(description)
                     
-                    //            let stockClass = StockClass()
+                    let stockClass = StockClass()
                     
-                    //            stockClass.symbol = symbol
+                    stockClass.symbol = symbol
                     
-                    //            stockClass.price = price
+                    stockClass.price = price
                     
-                    //            stockClass.companyName = companyName
+                    stockClass.companyName = companyName
                     
-                    //            stockClass.desc = description
+                    stockClass.desc = description
                     
-                    //            self.addStockToDB(stockClass)
-                    
+                    //self.addStockToDB(stockClass)
+                    do{
+                        let realm = try Realm()
+                        print(realm.configuration.fileURL)
+                        
+                        try realm.write({
+                            realm.add(stockClass, update: .modified)
+                        })
+                    }
+                    catch{
+                        print("Error in adding data to the Realm DB \(error)")
+                    }
                     
                     
                 }    }
