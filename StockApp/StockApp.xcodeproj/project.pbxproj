@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B8E957F299E7871B3E40DBE /* Pods_StockApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8E0B488471130E40DE1FE5 /* Pods_StockApp.framework */; };
+		7059C5492AF6F0DA00907A2B /* StockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7059C5482AF6F0DA00907A2B /* StockClass.swift */; };
 		7063AC5A2AEDD1A6002F89E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063AC592AEDD1A6002F89E8 /* AppDelegate.swift */; };
 		7063AC5C2AEDD1A6002F89E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063AC5B2AEDD1A6002F89E8 /* SceneDelegate.swift */; };
 		7063AC5E2AEDD1A6002F89E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7063AC5D2AEDD1A6002F89E8 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		52B06803015A864B75CF2501 /* Pods-StockApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockApp.release.xcconfig"; path = "Target Support Files/Pods-StockApp/Pods-StockApp.release.xcconfig"; sourceTree = "<group>"; };
+		7059C5482AF6F0DA00907A2B /* StockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockClass.swift; sourceTree = "<group>"; };
 		7063AC562AEDD1A6002F89E8 /* StockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7063AC592AEDD1A6002F89E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7063AC5B2AEDD1A6002F89E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				7063AC642AEDD1A7002F89E8 /* LaunchScreen.storyboard */,
 				7063AC672AEDD1A7002F89E8 /* Info.plist */,
 				7098578A2AF2F881006AF9B1 /* AddStockViewController.swift */,
+				7059C5482AF6F0DA00907A2B /* StockClass.swift */,
 			);
 			path = StockApp;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				7063AC5A2AEDD1A6002F89E8 /* AppDelegate.swift in Sources */,
 				7063AC5C2AEDD1A6002F89E8 /* SceneDelegate.swift in Sources */,
 				7098578B2AF2F881006AF9B1 /* AddStockViewController.swift in Sources */,
+				7059C5492AF6F0DA00907A2B /* StockClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
