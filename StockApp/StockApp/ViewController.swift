@@ -14,11 +14,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         loadStockValues()
+        
     }
     
     func loadStockValues(){
         do{
+            stocksArray = [StockClass]()
             let realm = try Realm()
             let stocks = realm.objects(StockClass.self)
             print(stocks)
@@ -46,5 +52,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = "\(symbol) : \(price)$"
         return cell
         }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            stocksArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func deleteFromRealmDB(_ stock : StockClass){
+        do{
+            let realm = try Realm()
+            try realm.write{
+                realm.delete(stock)
+            }
+        }catch{
+            print("Error in delteting \(error)")
+        }
+    }
 }
 

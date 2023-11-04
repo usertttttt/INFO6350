@@ -86,6 +86,7 @@ class AddStockViewController: UIViewController {
                         try realm.write({
                             realm.add(stockClass, update: .modified)
                         })
+                        self.navigationController?.popViewController(animated: true)
                     }
                     catch{
                         print("Error in adding data to the Realm DB \(error)")
