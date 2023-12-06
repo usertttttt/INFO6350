@@ -13,6 +13,8 @@
 		706C453F2B20077600BA32A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706C453D2B20077600BA32A7 /* Main.storyboard */; };
 		706C45412B20077700BA32A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706C45402B20077700BA32A7 /* Assets.xcassets */; };
 		706C45442B20077700BA32A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706C45422B20077700BA32A7 /* LaunchScreen.storyboard */; };
+		70935DE82B200FF000D8DFE4 /* ChristmasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70935DE62B200FF000D8DFE4 /* ChristmasTableViewCell.swift */; };
+		70935DE92B200FF000D8DFE4 /* ChristmasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70935DE72B200FF000D8DFE4 /* ChristmasTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		706C45402B20077700BA32A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706C45432B20077700BA32A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		706C45452B20077800BA32A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70935DE62B200FF000D8DFE4 /* ChristmasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChristmasTableViewCell.swift; sourceTree = "<group>"; };
+		70935DE72B200FF000D8DFE4 /* ChristmasTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChristmasTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				706C45402B20077700BA32A7 /* Assets.xcassets */,
 				706C45422B20077700BA32A7 /* LaunchScreen.storyboard */,
 				706C45452B20077800BA32A7 /* Info.plist */,
+				70935DE62B200FF000D8DFE4 /* ChristmasTableViewCell.swift */,
+				70935DE72B200FF000D8DFE4 /* ChristmasTableViewCell.xib */,
 			);
 			path = MerryChristmas;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70935DE92B200FF000D8DFE4 /* ChristmasTableViewCell.xib in Resources */,
 				706C45442B20077700BA32A7 /* LaunchScreen.storyboard in Resources */,
 				706C45412B20077700BA32A7 /* Assets.xcassets in Resources */,
 				706C453F2B20077600BA32A7 /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70935DE82B200FF000D8DFE4 /* ChristmasTableViewCell.swift in Sources */,
 				706C453C2B20077600BA32A7 /* ViewController.swift in Sources */,
 				706C45382B20077600BA32A7 /* AppDelegate.swift in Sources */,
 				706C453A2B20077600BA32A7 /* SceneDelegate.swift in Sources */,

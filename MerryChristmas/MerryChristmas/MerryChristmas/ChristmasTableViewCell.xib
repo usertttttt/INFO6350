@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="KGk-i7-Jjw" customClass="ChristmasTableViewCell" customModule="MerryChristmas" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Christmas1" translatesAutoresizingMaskIntoConstraints="NO" id="Ki9-kb-D8W">
+                        <rect key="frame" x="5" y="5" width="310" height="210"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WH-6q-9XN">
+                        <rect key="frame" x="5" y="220" width="310" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="siA-i5-RJb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5WH-6q-9XN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6H6-kH-pdi"/>
+                    <constraint firstItem="Ki9-kb-D8W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="7Ej-b3-eaQ"/>
+                    <constraint firstItem="Ki9-kb-D8W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ckd-Id-JOP"/>
+                    <constraint firstAttribute="trailing" secondItem="Ki9-kb-D8W" secondAttribute="trailing" constant="5" id="P7w-Df-5J8"/>
+                    <constraint firstAttribute="bottom" secondItem="5WH-6q-9XN" secondAttribute="bottom" constant="5" id="XEG-Zi-DPM"/>
+                    <constraint firstAttribute="trailing" secondItem="5WH-6q-9XN" secondAttribute="trailing" constant="5" id="iD9-sI-CwL"/>
+                    <constraint firstItem="5WH-6q-9XN" firstAttribute="top" secondItem="Ki9-kb-D8W" secondAttribute="bottom" constant="5" id="qos-IH-Tdn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgView" destination="Ki9-kb-D8W" id="bOn-0v-7X7"/>
+                <outlet property="lblChristmas" destination="5WH-6q-9XN" id="IJn-Ew-eKp"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="61.267605633802823"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Christmas1" width="2489" height="1659"/>
+    </resources>
+</document>
