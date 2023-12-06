@@ -13,6 +13,8 @@
 		70935E422B20223800D8DFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70935E402B20223800D8DFE4 /* Main.storyboard */; };
 		70935E442B20223A00D8DFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70935E432B20223A00D8DFE4 /* Assets.xcassets */; };
 		70935E472B20223A00D8DFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70935E452B20223A00D8DFE4 /* LaunchScreen.storyboard */; };
+		70935E512B20308A00D8DFE4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70935E502B20308A00D8DFE4 /* Constants.swift */; };
+		70935E532B20372200D8DFE4 /* StockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70935E522B20372200D8DFE4 /* StockClass.swift */; };
 		DED2619B7CE3B61E2D25A975 /* Pods_StockAppFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565FC02A0AF0BAE2D4B9DF4F /* Pods_StockAppFinal.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		70935E432B20223A00D8DFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70935E462B20223A00D8DFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70935E482B20223A00D8DFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70935E502B20308A00D8DFE4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		70935E522B20372200D8DFE4 /* StockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				4549A73B988864A567D96EDD /* Pods-StockAppFinal.debug.xcconfig */,
 				16CB36AEFE56B8D812A4F81D /* Pods-StockAppFinal.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,8 @@
 				70935E432B20223A00D8DFE4 /* Assets.xcassets */,
 				70935E452B20223A00D8DFE4 /* LaunchScreen.storyboard */,
 				70935E482B20223A00D8DFE4 /* Info.plist */,
+				70935E502B20308A00D8DFE4 /* Constants.swift */,
+				70935E522B20372200D8DFE4 /* StockClass.swift */,
 			);
 			path = StockAppFinal;
 			sourceTree = "<group>";
@@ -208,8 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				70935E3F2B20223800D8DFE4 /* ViewController.swift in Sources */,
+				70935E532B20372200D8DFE4 /* StockClass.swift in Sources */,
 				70935E3B2B20223800D8DFE4 /* AppDelegate.swift in Sources */,
 				70935E3D2B20223800D8DFE4 /* SceneDelegate.swift in Sources */,
+				70935E512B20308A00D8DFE4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
