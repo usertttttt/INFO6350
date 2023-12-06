@@ -21,10 +21,64 @@
                     <navigationItem key="navigationItem" title="Name and Phone" id="NgX-oV-mPi">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="efr-pi-eu7"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="xKr-R0-XNF" kind="show" identifier="SegwayNameAndPhoneNumber" id="qbF-Yt-0LY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TqO-Gc-PoC">
+            <objects>
+                <viewController id="xKr-R0-XNF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ajz-Db-3Iy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Cz-Go-6UR">
+                                <rect key="frame" x="10" y="409" width="373" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qL0-al-fF7">
+                                <rect key="frame" x="10" y="345" width="373" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="1ys-54-SZO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viE-97-Y36">
+                                <rect key="frame" x="10" y="473" width="373" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CVk-bt-rns"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UXc-J4-oBC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qL0-al-fF7" firstAttribute="leading" secondItem="UXc-J4-oBC" secondAttribute="leading" constant="10" id="1et-Nx-OmB"/>
+                            <constraint firstItem="9Cz-Go-6UR" firstAttribute="centerX" secondItem="Ajz-Db-3Iy" secondAttribute="centerX" id="Aoo-Xa-5pw"/>
+                            <constraint firstItem="viE-97-Y36" firstAttribute="leading" secondItem="UXc-J4-oBC" secondAttribute="leading" constant="10" id="H4i-cm-DqO"/>
+                            <constraint firstItem="UXc-J4-oBC" firstAttribute="trailing" secondItem="qL0-al-fF7" secondAttribute="trailing" constant="10" id="LpT-qj-CjI"/>
+                            <constraint firstItem="UXc-J4-oBC" firstAttribute="trailing" secondItem="viE-97-Y36" secondAttribute="trailing" constant="10" id="Ygh-Gw-JZY"/>
+                            <constraint firstItem="viE-97-Y36" firstAttribute="top" secondItem="9Cz-Go-6UR" secondAttribute="bottom" constant="30" id="ZKo-Wj-mtc"/>
+                            <constraint firstItem="9Cz-Go-6UR" firstAttribute="centerY" secondItem="Ajz-Db-3Iy" secondAttribute="centerY" id="bR6-z4-iVU"/>
+                            <constraint firstItem="9Cz-Go-6UR" firstAttribute="leading" secondItem="UXc-J4-oBC" secondAttribute="leading" constant="10" id="hSO-Ga-2V6"/>
+                            <constraint firstItem="UXc-J4-oBC" firstAttribute="trailing" secondItem="9Cz-Go-6UR" secondAttribute="trailing" constant="10" id="j7n-bR-l30"/>
+                            <constraint firstItem="9Cz-Go-6UR" firstAttribute="top" secondItem="qL0-al-fF7" secondAttribute="bottom" constant="30" id="xAU-iO-Rgm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qoX-JU-CNT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yg3-rp-gLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="-10"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QxR-jI-iK6">
