@@ -13,6 +13,8 @@
 		70935E1E2B2018F900D8DFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70935E1C2B2018F900D8DFE4 /* Main.storyboard */; };
 		70935E202B2018FA00D8DFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70935E1F2B2018FA00D8DFE4 /* Assets.xcassets */; };
 		70935E232B2018FA00D8DFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70935E212B2018FA00D8DFE4 /* LaunchScreen.storyboard */; };
+		70935E2B2B201C1C00D8DFE4 /* NamePhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70935E2A2B201C1C00D8DFE4 /* NamePhoneNumberViewController.swift */; };
+		70935E2D2B201FDE00D8DFE4 /* SendNamePhoneNumberDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70935E2C2B201FDE00D8DFE4 /* SendNamePhoneNumberDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		70935E1F2B2018FA00D8DFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70935E222B2018FA00D8DFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70935E242B2018FA00D8DFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70935E2A2B201C1C00D8DFE4 /* NamePhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePhoneNumberViewController.swift; sourceTree = "<group>"; };
+		70935E2C2B201FDE00D8DFE4 /* SendNamePhoneNumberDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNamePhoneNumberDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				70935E1F2B2018FA00D8DFE4 /* Assets.xcassets */,
 				70935E212B2018FA00D8DFE4 /* LaunchScreen.storyboard */,
 				70935E242B2018FA00D8DFE4 /* Info.plist */,
+				70935E2A2B201C1C00D8DFE4 /* NamePhoneNumberViewController.swift */,
+				70935E2C2B201FDE00D8DFE4 /* SendNamePhoneNumberDelegate.swift */,
 			);
 			path = NamePhoneNumberProtocolDelegate;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				70935E1B2B2018F900D8DFE4 /* ViewController.swift in Sources */,
+				70935E2D2B201FDE00D8DFE4 /* SendNamePhoneNumberDelegate.swift in Sources */,
+				70935E2B2B201C1C00D8DFE4 /* NamePhoneNumberViewController.swift in Sources */,
 				70935E172B2018F900D8DFE4 /* AppDelegate.swift in Sources */,
 				70935E192B2018F900D8DFE4 /* SceneDelegate.swift in Sources */,
 			);

@@ -15,24 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-LR-oEa">
+                                <rect key="frame" x="5" y="108" width="383" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FzZ-hI-olK">
+                                        <rect key="frame" x="0.0" y="50" width="383" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FzZ-hI-olK" id="VaQ-QX-5Q1">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4CC-ao-E32"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SHE-MY-kEe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NZa-LR-oEa" secondAttribute="bottom" constant="5" id="2C9-pH-sLt"/>
+                            <constraint firstItem="NZa-LR-oEa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="2RE-Jm-FYR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NZa-LR-oEa" secondAttribute="trailing" constant="5" id="cBG-NH-lTo"/>
+                            <constraint firstItem="NZa-LR-oEa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="mgi-sb-PfO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name and Phone" id="NgX-oV-mPi">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="efr-pi-eu7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="efr-pi-eu7">
+                            <connections>
+                                <action selector="addNamePhoneNumber:" destination="BYZ-38-t0r" id="EZ6-BS-zdT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="xKr-R0-XNF" kind="show" identifier="SegwayNameAndPhoneNumber" id="qbF-Yt-0LY"/>
+                        <outlet property="tblView" destination="NZa-LR-oEa" id="Fha-by-gGE"/>
+                        <segue destination="xKr-R0-XNF" kind="show" identifier="segueNamePhoneNumber" id="qbF-Yt-0LY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Name Phone Number View Controller-->
         <scene sceneID="TqO-Gc-PoC">
             <objects>
-                <viewController id="xKr-R0-XNF" sceneMemberID="viewController">
+                <viewController id="xKr-R0-XNF" customClass="NamePhoneNumberViewController" customModule="NamePhoneNumberProtocolDelegate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ajz-Db-3Iy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,6 +88,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveNamePhone:" destination="xKr-R0-XNF" eventType="touchUpInside" id="oKT-mW-dzz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UXc-J4-oBC"/>
@@ -75,6 +109,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qoX-JU-CNT"/>
+                    <connections>
+                        <outlet property="name" destination="qL0-al-fF7" id="h6V-6h-NUl"/>
+                        <outlet property="phoneNumber" destination="9Cz-Go-6UR" id="BBJ-qi-p3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yg3-rp-gLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
