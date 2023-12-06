@@ -23,6 +23,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Stock Vlaues"/>
+                                <connections>
+                                    <action selector="getStockValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yGj-XJ-DbE"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dgD-jR-xC5">
                                 <rect key="frame" x="0.0" y="99" width="393" height="719"/>
@@ -37,6 +40,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gBF-Gx-wnY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MRR-fb-Qfx"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,6 +58,9 @@
                             <constraint firstItem="dgD-jR-xC5" firstAttribute="top" secondItem="Cps-bS-87y" secondAttribute="bottom" id="oPq-2f-Qdb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tblView" destination="dgD-jR-xC5" id="1Cc-wu-WQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
