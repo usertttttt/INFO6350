@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
-    let cities = ["New York", "London", "Paris", "Seattle"]
+    let cities = ["s1", "s2", "s3", "s4"]
 
         override func viewDidLoad() {
             super.viewDidLoad()
