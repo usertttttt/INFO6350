@@ -16,16 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LV-tj-g0q">
-                                <rect key="frame" x="91" y="76" width="211" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LV-tj-g0q">
+                                <rect key="frame" x="5" y="64" width="383" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="yei-Ec-1h7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get Weather Information"/>
+                                <connections>
+                                    <action selector="getWeatherValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mse-u3-9La"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-tC-TEo">
+                                <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sW4-rg-kgr">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sW4-rg-kgr" id="UKG-kN-HSB">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6hv-HK-d9L"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ix2-sV-7dv"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rfc-tC-TEo" secondAttribute="trailing" id="D3G-gU-5co"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rfc-tC-TEo" secondAttribute="bottom" id="MdL-ER-Pdw"/>
+                            <constraint firstItem="rfc-tC-TEo" firstAttribute="top" secondItem="1LV-tj-g0q" secondAttribute="bottom" id="NuD-xc-0Os"/>
+                            <constraint firstItem="rfc-tC-TEo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ox6-md-0YE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1LV-tj-g0q" secondAttribute="trailing" constant="5" id="Srj-fg-xM3"/>
+                            <constraint firstItem="1LV-tj-g0q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="o8f-co-O3h"/>
+                            <constraint firstItem="1LV-tj-g0q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="zMc-Ft-maQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tblView" destination="rfc-tC-TEo" id="rbE-Hh-Ycr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
